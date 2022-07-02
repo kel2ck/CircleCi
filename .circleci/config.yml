@@ -36,6 +36,9 @@ jobs:
           name: The doll process
           command: |
             echo "I am a dull process"
+      - run: 
+          name:  Another dull process
+          command: echo "I told you before, I am a dull process!"
 
 
 workflows:

@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Print out Kelvin's name and say hello
+          name: Print out Kelvin's name and say hello j
           command: |
             echo "Hello Kelvin, Big boss!" >> name.txt
             cat name.txt  

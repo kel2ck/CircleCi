@@ -1,0 +1,13 @@
+version: 2.1
+
+jobs:
+  kelvin-sample:
+    docker: 
+      - image: circleci/node:13.8.0
+    steps:
+      - checkout
+      - run:
+          name: Print out Kelvin's name and say hello
+          command: |
+            echo "Hello Kelvin, Big boss!" >> name.txt
+            cat name.txt  

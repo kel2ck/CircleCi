@@ -19,7 +19,7 @@ jobs:
       - checkout
       - run: 
           name: Tell Mr Kelvin that this process is working
-          shell: |
+          command: |
             mkdir kelvin
             cd kelvin
             echo https://sagencoders.com >> ayorinde.txt
@@ -34,7 +34,7 @@ jobs:
       - checkout
       - run: 
           name: The doll process
-          shell: |
+          command: |
             echo "I am a dull process"
 
 

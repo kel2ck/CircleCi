@@ -11,3 +11,8 @@ jobs:
           command: |
             echo "Hello Kelvin, Big boss!" >> name.txt
             cat name.txt  
+
+workflows:
+  kelvin:
+    jobs:
+      - kelvin-sample

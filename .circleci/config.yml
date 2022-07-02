@@ -27,7 +27,6 @@ jobs:
             echo https://udacity.com >> ayorinde.txt
 
             tail -2 ayorinde.txt
-
   dull-process:
     docker:
       - image: python:3.7-alpine3.11

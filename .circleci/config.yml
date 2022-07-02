@@ -11,8 +11,38 @@ jobs:
           command: |
             echo "Hello Kelvin, Big boss!" >> name.txt
             cat name.txt  
+        
+  smart-process:
+    docker:
+      - image: python:3.7-alpine3.11
+    steps:
+      - checkout
+      - run: 
+          name: Tell Mr Kelvin that this process is working
+          shell: |
+            mkdir kelvin
+            cd kelvin
+            echo https://sagencoders.com >> ayorinde.txt
+            echo https://google.com >> ayorinde.txt
+            echo https://udacity.com >> ayorinde.txt
+
+            tail -2 ayorinde.txt
+
+  dull-process:
+    docker:
+      - image: python:3.7-alpine3.11
+    steps:
+      - checkout
+      - run: 
+          name: The doll process
+          shell: |
+            echo "I am a dull process"
+
 
 workflows:
   kelvin:
     jobs:
       - kelvin-sample
+      - smart-process
+      - dull-process:
+          requires: [kelvin-sample, smart-process]

@@ -24,10 +24,10 @@ jobs:
             cd kelvin
             echo https://sagencoders.com >> ayorinde.txt
             echo https://google.com >> ayorinde.txt
-            echo https://udacity.com >> ayorinde.txt
-
+            echo https://udacity.com >> ayorinde.tx
             tail -2 ayorinde.txt
-  dull-process:
+
+  dullprocess:
     docker:
       - image: python:3.7-alpine3.11
     steps:
